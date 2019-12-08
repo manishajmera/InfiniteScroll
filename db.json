@@ -1,0 +1,99 @@
+{
+	"posts":[
+		{"id":1,"items":[
+			{"title":"First post of the Infinite Scrolling","favFlag":0},
+			{"title":"2 post of the Infinite Scrolling","favFlag":0},
+			{"title":"3 post of the Infinite Scrolling","favFlag":0},
+			{"title":"4 post of the Infinite Scrolling","favFlag":0},
+			{"title":"5 post of the Infinite Scrolling","favFlag":0},
+			{"title":"6 post of the Infinite Scrolling","favFlag":0},
+			{"title":"7 post of the Infinite Scrolling","favFlag":0},
+			{"title":"8 post of the Infinite Scrolling","favFlag":0},
+			{"title":"9 post of the Infinite Scrolling","favFlag":0},
+			{"title":"10 post of the Infinite Scrolling","favFlag":0}
+			]},
+			{"id":2,"items":[
+			{"title":"First post of the Infinite Scrolling","favFlag":0},
+			{"title":"2 post of the Infinite Scrolling","favFlag":0},
+			{"title":"3 post of the Infinite Scrolling","favFlag":0},
+			{"title":"4 post of the Infinite Scrolling","favFlag":0},
+			{"title":"5 post of the Infinite Scrolling","favFlag":0},
+			{"title":"6 post of the Infinite Scrolling","favFlag":0},
+			{"title":"7 post of the Infinite Scrolling","favFlag":0},
+			{"title":"8 post of the Infinite Scrolling","favFlag":0},
+			{"title":"9 post of the Infinite Scrolling","favFlag":0},
+			{"title":"10 post of the Infinite Scrolling","favFlag":0}
+			]},
+			{"id":3,"items":[
+			{"title":"First post of the Infinite Scrolling","favFlag":0},
+			{"title":"2 post of the Infinite Scrolling","favFlag":0},
+			{"title":"3 post of the Infinite Scrolling","favFlag":0},
+			{"title":"4 post of the Infinite Scrolling","favFlag":0},
+			{"title":"5 post of the Infinite Scrolling","favFlag":0},
+			{"title":"6 post of the Infinite Scrolling","favFlag":0},
+			{"title":"7 post of the Infinite Scrolling","favFlag":0},
+			{"title":"8 post of the Infinite Scrolling","favFlag":0},
+			{"title":"9 post of the Infinite Scrolling","favFlag":0},
+			{"title":"10 post of the Infinite Scrolling","favFlag":0}
+			]},
+			{"id":4,"items":[
+			{"title":"First post of the Infinite Scrolling","favFlag":0},
+			{"title":"2 post of the Infinite Scrolling","favFlag":0},
+			{"title":"3 post of the Infinite Scrolling","favFlag":0},
+			{"title":"4 post of the Infinite Scrolling","favFlag":0},
+			{"title":"5 post of the Infinite Scrolling","favFlag":0},
+			{"title":"6 post of the Infinite Scrolling","favFlag":0},
+			{"title":"7 post of the Infinite Scrolling","favFlag":0},
+			{"title":"8 post of the Infinite Scrolling","favFlag":0},
+			{"title":"9 post of the Infinite Scrolling","favFlag":0},
+			{"title":"10 post of the Infinite Scrolling","favFlag":0}
+			]},
+			{"id":5,"items":[
+			{"title":"First post of the Infinite Scrolling","favFlag":0},
+			{"title":"2 post of the Infinite Scrolling","favFlag":0},
+			{"title":"3 post of the Infinite Scrolling","favFlag":0},
+			{"title":"4 post of the Infinite Scrolling","favFlag":0},
+			{"title":"5 post of the Infinite Scrolling","favFlag":0},
+			{"title":"6 post of the Infinite Scrolling","favFlag":0},
+			{"title":"7 post of the Infinite Scrolling","favFlag":0},
+			{"title":"8 post of the Infinite Scrolling","favFlag":0},
+			{"title":"9 post of the Infinite Scrolling","favFlag":0},
+			{"title":"10 post of the Infinite Scrolling","favFlag":0}
+			]},
+			{"id":6,"items":[
+			{"title":"First post of the Infinite Scrolling","favFlag":0},
+			{"title":"2 post of the Infinite Scrolling","favFlag":0},
+			{"title":"3 post of the Infinite Scrolling","favFlag":0},
+			{"title":"4 post of the Infinite Scrolling","favFlag":0},
+			{"title":"5 post of the Infinite Scrolling","favFlag":0},
+			{"title":"6 post of the Infinite Scrolling","favFlag":0},
+			{"title":"7 post of the Infinite Scrolling","favFlag":0},
+			{"title":"8 post of the Infinite Scrolling","favFlag":0},
+			{"title":"9 post of the Infinite Scrolling","favFlag":0},
+			{"title":"10 post of the Infinite Scrolling","favFlag":0}
+			]},
+			{"id":7,"items":[
+			{"title":"First post of the Infinite Scrolling","favFlag":0},
+			{"title":"2 post of the Infinite Scrolling","favFlag":0},
+			{"title":"3 post of the Infinite Scrolling","favFlag":0},
+			{"title":"4 post of the Infinite Scrolling","favFlag":0},
+			{"title":"5 post of the Infinite Scrolling","favFlag":0},
+			{"title":"6 post of the Infinite Scrolling","favFlag":0},
+			{"title":"7 post of the Infinite Scrolling","favFlag":0},
+			{"title":"8 post of the Infinite Scrolling","favFlag":0},
+			{"title":"9 post of the Infinite Scrolling","favFlag":0},
+			{"title":"10 post of the Infinite Scrolling","favFlag":0}
+			]},{"id":8,"items":[
+			{"title":"First post of the Infinite Scrolling","favFlag":0},
+			{"title":"2 post of the Infinite Scrolling","favFlag":0},
+			{"title":"3 post of the Infinite Scrolling","favFlag":0},
+			{"title":"4 post of the Infinite Scrolling","favFlag":0},
+			{"title":"5 post of the Infinite Scrolling","favFlag":0},
+			{"title":"6 post of the Infinite Scrolling","favFlag":0},
+			{"title":"7 post of the Infinite Scrolling","favFlag":0},
+			{"title":"8 post of the Infinite Scrolling","favFlag":0},
+			{"title":"9 post of the Infinite Scrolling","favFlag":0},
+			{"title":"10 post of the Infinite Scrolling","favFlag":0}
+			]}
+]
+}
