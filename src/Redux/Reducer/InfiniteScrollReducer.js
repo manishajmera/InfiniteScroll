@@ -15,12 +15,19 @@ const InfiniteScrollReducer = (state = initialState, action) => {
             ...state,
             items : items,
             currentPage:state.currentPage+1,
-            failure:false
+            failure:false,
+            loader:false
             }
           case "InfiniteScrollFailureAction":
+            return {
+              ...state,
+              failure:action.failure,
+              loader:false
+            }
+          case "StartLoader":
           return {
             ...state,
-            failure:action.failure
+            loader:true,
           }
         default: return state
     }

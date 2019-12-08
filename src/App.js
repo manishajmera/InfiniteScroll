@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import {BrowserRouter as Router,Switch,Route,Link} from "react-router-dom";
 import InfiniteScroll from './Components/InfiniteScroll';
+import Favorites from './Components/Favorites';
 import { Provider } from 'react-redux';
 import store from './Redux/store';
 
@@ -23,20 +24,12 @@ function App() {
               <InfiniteScroll />
             </Route>
             <Route path="/favorite">
-              <Favorite />
+              <Favorites />
             </Route>
           </Switch>
         </div>
       </Provider>
     </Router>
-  );
-}
-
-function Favorite() {
-  return (
-    <div>
-      <h2>favorite</h2>
-    </div>
   );
 }
 export default App;

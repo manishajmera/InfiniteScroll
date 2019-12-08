@@ -1,11 +1,11 @@
 import { combineReducers } from 'redux';
 
-import personalDetailReducer from './PersonalDetail/PersonalDetailReducer';
-import residenceReducer from './Residence/ResidenceReducer';
+import infiniteScrollReducer from './Reducer/InfiniteScrollReducer';
+import favoriteReducer from './Reducer/FavoriteReducer';
 
 const rootReducer = combineReducers({
-    personalDetail: personalDetailReducer,
-    residence: residenceReducer
+    infiniteScrollData: infiniteScrollReducer,
+    favoriteData: favoriteReducer
 });
 
 export default rootReducer;
