@@ -1,10 +1,11 @@
-import React from 'react';
+  import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import {BrowserRouter as Router,Switch,Route,Link} from "react-router-dom";
 import InfiniteScroll from './Components/InfiniteScroll';
 import { Provider } from 'react-redux';
 import store from './Redux/store';
+
 function App() {
   return (
     <Router>

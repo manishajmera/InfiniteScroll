@@ -2,15 +2,43 @@
 import React from 'react';
 import test from '../test';
 import { connect } from 'react-redux';
+import store from '../Redux/store';
+import {fetchData} from '../Redux/Action';
+store.dispatch(fetchData());
 
 const defaultProps = {
-    ctaClass:"primaryButton"
+    ctaClass:"primaryButton",
+    currentPage: 1,
 };
 
 class InfiniteScroll extends React.Component{
     constructor(props) {
         super(props);
+        this.handleScroll = this.handleScroll.bind(this);
+        this.isInViewport = this.isInViewport.bind(this);
     }
+    componentDidMount() {
+        window.addEventListener("scroll",this.handleScroll);
+    }
+
+    handleScroll(){
+      if (!this.props.failure && this.isInViewport()) {
+        let {currentPage} = this.props;
+        store.dispatch(fetchData(currentPage+1));
+      }
+    }
+
+    isInViewport(offset = 0) {
+      let lastItem = `item-${this.props.currentPage*9}`;
+      if(this.refs[lastItem]){
+        const top = this.refs[lastItem].getBoundingClientRect().top;
+        return (top + offset) >= 0 && (top - offset) <= window.innerHeight;
+      }else {
+        return false;
+      }
+
+  }
+
 
     componentWillReceiveProps(nextProps, nextState) {
         this.setState(nextProps);
@@ -21,29 +49,32 @@ class InfiniteScroll extends React.Component{
         let listOfItems = [];
         items.map((item,index)=>{
             listOfItems.push(
-                <li key={index}>
-                    <h2>{item.heading}</h2>
+                <li ref={`item-${index}`} key={index}>
+                    <img src="https://stimg.cardekho.com/images/carexteriorimages/630x420/Maruti/Swift/6318/1572069250647/front-left-side-47.jpg" height="240" width="360" />
+                    <h2>{index+1}</h2>
                     <p>{item.title}</p>
-                      <p>{item.title}</p>
-                        <p>{item.title}</p>
-                    <span>{item.favFlag}</span>
+                    <button styles={{height:"200px",width:"180px"}}>ADD to Favorites</button>
                 </li>
             )
         })
-        console.log(listOfItems);
         return listOfItems;
       }
         return(
+          <div>
           <ul>
-            {listItems(items)};
+            {listItems(items)}
           </ul>
+          {this.props.endOfinfinteScroll && <span>"End of the Page"</span>}
+        </div>
         );
     }
 }
 const mapStateToProps = state => {
   console.log(state);
     return {
-        items:state.items
+        items:state.items,
+        currentPage:state.currentPage,
+        endOfinfinteScroll:state.failure
     }
 }
 

@@ -6,9 +6,9 @@
 import { createStore,applyMiddleware } from 'redux';
 // import rootReducer from './RootReducer';
 import InfiniteScrollReducer from './Reducer/InfiniteScrollReducer';
-import logger from 'redux-logger';
-import { composeWithDevTools } from 'redux-devtools-extension';
+const thunkMiddleware  = require('redux-thunk').default;
 
-const store = createStore(InfiniteScrollReducer,composeWithDevTools(applyMiddleware(logger)));
+
+const store = createStore(InfiniteScrollReducer,applyMiddleware(thunkMiddleware));
 
 export default store;
