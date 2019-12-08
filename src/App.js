@@ -31,13 +31,6 @@ function App() {
     </Router>
   );
 }
-function Home() {
-  return (
-    <div>
-      <h2>Home</h2>
-    </div>
-  );
-}
 
 function Favorite() {
   return (

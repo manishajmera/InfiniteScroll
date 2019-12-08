@@ -3,7 +3,7 @@ import React from 'react';
 import test from '../test';
 import { connect } from 'react-redux';
 import store from '../Redux/store';
-import {fetchData} from '../Redux/Action';
+import {fetchData,postData} from '../Redux/Action';
 store.dispatch(fetchData());
 
 const defaultProps = {
@@ -16,6 +16,7 @@ class InfiniteScroll extends React.Component{
         super(props);
         this.handleScroll = this.handleScroll.bind(this);
         this.isInViewport = this.isInViewport.bind(this);
+        this.handleClick = this.handleClick.bind(this);
     }
     componentDidMount() {
         window.addEventListener("scroll",this.handleScroll);
@@ -26,6 +27,13 @@ class InfiniteScroll extends React.Component{
         let {currentPage} = this.props;
         store.dispatch(fetchData(currentPage+1));
       }
+    }
+
+    handleClick(index){
+      let {items} = this.props;
+      items[index].favFlag = true;
+      store.dispatch(postData(this.props.currentPage,items))
+
     }
 
     isInViewport(offset = 0) {
@@ -53,7 +61,7 @@ class InfiniteScroll extends React.Component{
                     <img src="https://stimg.cardekho.com/images/carexteriorimages/630x420/Maruti/Swift/6318/1572069250647/front-left-side-47.jpg" height="240" width="360" />
                     <h2>{index+1}</h2>
                     <p>{item.title}</p>
-                    <button styles={{height:"200px",width:"180px"}}>ADD to Favorites</button>
+                     <button styles={{height:"200px",width:"180px"}} onClick={()=>this.handleClick(index)}>{item.favFlag?"Remove from Favorite" :"ADD to Favorites"}</button>
                 </li>
             )
         })
