@@ -57,19 +57,21 @@ class InfiniteScroll extends React.Component{
         let listOfItems = [];
         items.map((item,index)=>{
             listOfItems.push(
-                <li ref={`item-${index}`} key={index}>
-                    <img src="https://stimg.cardekho.com/images/carexteriorimages/630x420/Maruti/Swift/6318/1572069250647/front-left-side-47.jpg" height="240" width="360" />
-                    <h2>{index+1}</h2>
-                    <p>{`${index+1} ${item.title}`}</p>
-                     <button styles={{height:"200px",width:"180px"}} onClick={()=>this.handleClick(index)}>{item.favFlag?"Remove from Favorite" :"ADD to Favorites"}</button>
+                <li ref={`item-${index}`} key={index} className="row" style={{"paddingBottom":"20px"}}>
+                    <img style={{height:"180px",width:"auto"}} src="https://stimg.cardekho.com/images/carexteriorimages/630x420/Maruti/Swift/6318/1572069250647/front-left-side-47.jpg"  className="col-sm-4"/>
+                    <div className="col-sm-8">
+                      <h2>{index+1}</h2>
+                      <p>{`${index+1} ${item.title}`}</p>
+                      <button className={`${item.favFlag? "btn btn-secondary " : "btn btn-primary"}`} onClick={()=>this.handleClick(index)}>{item.favFlag?"Added to favorites" :"ADD to favorites"}</button>
+                    </div>
                 </li>
             )
         })
         return listOfItems;
       }
         return(
-          <div>
-          <ul>
+          <div className="container">
+          <ul style={{"list-style": "none"}}>
             {listItems(items)}
           </ul>
           {this.props.loader ?  <span>Loading...........</span> :
