@@ -10,7 +10,6 @@ const InfiniteScrollReducer = (state = initialState, action) => {
         case "InfiniteScrollAction":
             let {items} = state;
             items = [...items,...action.items];
-            let endOfinfinteScroll = action.items.hasOwnProperty("title");
             return {
             ...state,
             items : items,
