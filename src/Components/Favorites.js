@@ -1,4 +1,3 @@
-'use strict';
 import React from 'react';
 import { connect } from 'react-redux';
 import store from '../Redux/store';
@@ -7,7 +6,6 @@ import {fetchAllData} from '../Redux/Action';
 store.dispatch(fetchAllData());
 
 export const Favorites = (props) => {
-  console.log(props);
   let container = () => {
     let h = [];
     let index = 0;
@@ -37,7 +35,6 @@ export const Favorites = (props) => {
 }
 
 const mapStateToProps = state => {
-    console.log(state);
     return {
         items:state.favoriteData.items,
     }
