@@ -1,4 +1,3 @@
-'use strict';
 import React from 'react';
 import { connect } from 'react-redux';
 import store from '../Redux/store';
@@ -56,22 +55,21 @@ class InfiniteScroll extends React.Component{
       let listItems = (items) => {
         let listOfItems = [];
         items.map((item,index)=>{
-            listOfItems.push(
-                <li ref={`item-${index}`} key={index} className="row" style={{"paddingBottom":"20px"}}>
-                    <img style={{height:"180px",width:"auto"}} src="https://stimg.cardekho.com/images/carexteriorimages/630x420/Maruti/Swift/6318/1572069250647/front-left-side-47.jpg"  className="col-sm-4"/>
+                listOfItems.push(<li ref={`item-${index}`} key={index} className="row" style={{"paddingBottom":"20px"}}>
+                    <img alt="dummy" style={{height:"180px",width:"auto"}} src="https://stimg.cardekho.com/images/carexteriorimages/630x420/Maruti/Swift/6318/1572069250647/front-left-side-47.jpg"  className="col-sm-4"/>
                     <div className="col-sm-8">
                       <h2>{index+1}</h2>
                       <p>{`${index+1} ${item.title}`}</p>
                       <button className={`${item.favFlag? "btn btn-secondary " : "btn btn-primary"}`} onClick={()=>this.handleClick(index)}>{item.favFlag?"Added to favorites" :"ADD to favorites"}</button>
                     </div>
-                </li>
-            )
+                </li>)
         })
+           
         return listOfItems;
       }
         return(
           <div className="container">
-          <ul style={{"list-style": "none"}}>
+          <ul style={{"listStyle": "none"}}>
             {listItems(items)}
           </ul>
           {this.props.loader ?  <span>Loading...........</span> :
